@@ -1,0 +1,45 @@
+#! /bin/sh
+
+# Variables
+# export WALLPAPER="macos_mountain.jpg"
+
+# Startup apps
+pgrep -x sxhkd > /dev/null || sxhkd &
+xsetroot -cursor_name left_ptr &
+# Uncomment this line if you use xwallpaper
+# xwallpaper --zoom ~/.config/wallpapers/$WALLPAPER &
+nitrogen --restore &
+picom -b &
+pgrep -x polybar > /dev/null || polybar -r bar &
+
+bspc monitor -d 1 2 3 4 5 6 7 8 9
+
+# Window stuff
+bspc config split_ratio          0.5
+
+# Some BSPWM stuff.
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+# Workspace Rules
+bspc rule -a "kitty" desktop='^1'
+bspc rule -a "Brave-browser-nightly" desktop='^2'
+bspc rule -a "Code - Insiders" desktop='^3'
+bspc rule -a "GitHub Desktop" desktop='^4'
+bspc rule -a "Arduino IDE" desktop='^3'
+bspc rule -a "org.kde.kdenlive" desktop='^5'
+bspc rule -a "WebCord" desktop='^6'
+bspc rule -a "Element" desktop='^6'
+
+# Floating Rules
+bspc rule -a "Pavucontrol" state=floating
+
+# Window Decorations
+bspc config border_width 2
+bspc config window_gap 10
+bspc config top_padding 54
+bspc config normal_border_color "#444a73"
+bspc config focused_border_color "#c099ff"
+
+# Some miscellaneous stuff 
+bspc config focus_follows_pointer false

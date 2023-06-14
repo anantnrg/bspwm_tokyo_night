@@ -1,0 +1,35 @@
+super + Escape
+    pkill -usr1 -x sxhkd; notify-send --app-name 'sxhkd' 'Your sxhkd config has been reloaded!'
+
+super + r 
+    /home/mik3y/.config/bspwm/bspwmrc; notify-send --app-name 'BSPWM' 'Your BSPWM config has been reloaded!'
+
+super + {Return, KP_Enter}
+    /usr/bin/kitty
+
+super + space
+    /usr/bin/rofi -show drun -theme ~/.config/rofi/launchers/type-6/style-2.rasi
+
+super + {_,shift + }{1-9,0}
+    bspc {desktop -f,node -d} {1-9,0} --follow
+
+super + {_,shift + }q
+    bspc node -{c,k}
+
+super + v
+    bspc node focused -t \~floating
+
+super + {Right, Left}
+    bspc node -f next.local
+
+super + shift + {Right,Left}
+    bspc node @/ -C {forward,backward}
+
+super + j
+    bspc node @parent -R 90
+    
+super + m
+    bspc quit
+
+Print
+    scrot -F ~/Pictures/screenshots/(date +'%I_%M_%S_%m_%d_%Y').png
