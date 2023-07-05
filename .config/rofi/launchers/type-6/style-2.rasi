@@ -60,7 +60,7 @@ mainbox {
 imagebox {
     padding:                     40px;
     background-color:            transparent;
-    background-image:            url("~/.config/wallpapers/macos_mountain.jpg", width);
+    background-image:            url("~/.config/wallpapers/retro_lab.jpg", height);
     orientation:                 vertical;
     children:                    [ "inputbar", "dummy", "mode-switcher" ];
 }

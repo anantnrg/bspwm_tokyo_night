@@ -1,0 +1,42 @@
+(include "widgets/bar.yuck")
+(include "widgets/desktop.yuck")
+(include "widgets/powermenu.yuck")
+
+(defwindow bar
+    :monitor 0
+    :geometry (geometry :x "0px"
+                        :y "8px"
+                        :width "1902px"
+                        :height "40px"
+	                :anchor "top center")
+    :stacking "fg"
+    :reserve (struts :distance "55px" :side "top")
+    :windowtype "dock"
+    :wm-ignore false
+    (bar))
+
+(defwindow desktop
+    :monitor 0
+    :geometry (geometry :x "20px"
+                        :y "85px"
+                        :width "500px"
+                        :height "300px"
+                        :anchor "top left")
+    :stacking "fg"
+    :reserve (struts :distance "55px" :side "top")
+    :windowtype "dock"
+    :wm-ignore false
+    (desktop))
+
+(defwindow powermenu
+    :monitor 0
+    :geometry (geometry :x "8px"
+                        :y "0px"
+                        :width "50px"
+                        :height "150px"
+                        :anchor "right center")
+    :stacking "fg"
+    :reserve (struts :distance "55px" :side "top")
+    :windowtype "dock"
+    :wm-ignore false
+    (powermenu))

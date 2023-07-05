@@ -23,8 +23,9 @@ bspc config gapless_monocle      true
 
 # Workspace Rules
 bspc rule -a "kitty" desktop='^1'
-bspc rule -a "Brave-browser-nightly" desktop='^2'
-bspc rule -a "Code - Insiders" desktop='^3'
+bspc rule -a "Brave-browser" desktop='^2'
+bspc rule -a "Code" desktop='^3'
+bspc rule -a "obsidian" desktop='^4'
 bspc rule -a "GitHub Desktop" desktop='^4'
 bspc rule -a "Arduino IDE" desktop='^3'
 bspc rule -a "org.kde.kdenlive" desktop='^5'
@@ -33,6 +34,7 @@ bspc rule -a "Element" desktop='^6'
 
 # Floating Rules
 bspc rule -a "Pavucontrol" state=floating
+bspc rule -a "nitrogen" state=floating
 
 # Window Decorations
 bspc config border_width 2

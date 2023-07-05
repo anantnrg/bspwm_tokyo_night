@@ -33,3 +33,9 @@ super + m
 
 Print
     scrot -F ~/Pictures/screenshots/(date +'%I_%M_%S_%m_%d_%Y').png
+
+super + shift + p
+    sudo poweroff
+
+super + shift + r
+    sudo reboot

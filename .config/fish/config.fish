@@ -27,7 +27,6 @@ if status is-interactive
     alias bat="bat --theme=tokyo_night"
     alias ls="exa -a --icons --color=always --group-directories-first"
     alias ll="exa -l --icons --color=always --group-directories-first"
-    alias code="code-insiders"
     alias visudo="sudo EDITOR=nvim visudo"
     alias gadd="git add ."
     alias gcommit="git commit -m"
